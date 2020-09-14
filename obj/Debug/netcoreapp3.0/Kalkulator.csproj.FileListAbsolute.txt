@@ -9,3 +9,14 @@ C:\Users\Mateusz\source\repos\Kalkulator\Kalkulator\bin\Debug\netcoreapp3.0\Kalk
 C:\Users\Mateusz\source\repos\Kalkulator\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.pdb
 C:\Users\Mateusz\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.dll
 C:\Users\Mateusz\source\repos\Kalkulator\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.pdb
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.exe
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.deps.json
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.runtimeconfig.json
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.runtimeconfig.dev.json
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.dll
+C:\Users\Mateusz\Desktop\K\Kalkulator\bin\Debug\netcoreapp3.0\Kalkulator.pdb
+C:\Users\Mateusz\Desktop\K\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.csprojAssemblyReference.cache
+C:\Users\Mateusz\Desktop\K\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.AssemblyInfoInputs.cache
+C:\Users\Mateusz\Desktop\K\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.AssemblyInfo.cs
+C:\Users\Mateusz\Desktop\K\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.dll
+C:\Users\Mateusz\Desktop\K\Kalkulator\obj\Debug\netcoreapp3.0\Kalkulator.pdb

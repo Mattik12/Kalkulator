@@ -26,5 +26,20 @@ namespace Kalkulator
         {
             return number1 + number2;
         }
+
+        public double Odejmowanie(double number1, double number2)
+        {
+            return number1 - number2;
+        }
+
+        public double Mnozenie(double number1, double number2)
+        {
+            return number1 * number2;
+        }
+
+        public double Dzielenie(double number1, double number2)
+        {
+            return number1 / number2;
+        }
     }
 }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mateusz\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj",
+      "projectUniqueName": "C:\\Users\\Mateusz\\Desktop\\K\\Kalkulator\\Kalkulator.csproj",
       "projectName": "Kalkulator",
-      "projectPath": "C:\\Users\\Mateusz\\source\\repos\\Kalkulator\\Kalkulator\\Kalkulator.csproj",
+      "projectPath": "C:\\Users\\Mateusz\\Desktop\\K\\Kalkulator\\Kalkulator.csproj",
       "packagesPath": "C:\\Users\\Mateusz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mateusz\\source\\repos\\Kalkulator\\Kalkulator\\obj\\",
+      "outputPath": "C:\\Users\\Mateusz\\Desktop\\K\\Kalkulator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mateusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
