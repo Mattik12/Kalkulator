@@ -6,84 +6,139 @@ namespace Kalkulator
     {
         static void Main(string[] args)
         {
+            double liczba;
+            double number1 = 0;
+            double number2 = 0;
+            string liczbaWprowadzona1 = "";
+            bool zmienna = false;
+            NumberValidator validator = new NumberValidator(liczbaWprowadzona1);
+
+
             Console.WriteLine("Witaj w kalkulatorze");
             Console.WriteLine("Aby zacząć podaj dwie liczby i wybierz działanie jakie chcesz wykonać");
             Console.WriteLine("Liczba pierwsza to: ");
-            string liczbaWprowadzona1 = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Liczba druga to: ");
-            string liczbaWprowadzona2 = Console.ReadLine();
-            Console.Clear();
-            NumberValidator validator = new NumberValidator(liczbaWprowadzona1, liczbaWprowadzona2);
-            double liczba1;
-            double liczba2;
-            //bool zmienna = true;
-            bool zmienna = validator.Validator(liczbaWprowadzona1, liczbaWprowadzona2, out liczba1, out liczba2);
-            if(zmienna == true)
-            {
-                Console.WriteLine("Brawo, Twoje liczby to {0}, {1}", liczba1, liczba2);
+            liczbaWprowadzona1 = Console.ReadLine();
+            zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+            if(zmienna != true)
+            {             
+                while(zmienna != true)
+                {
+                    Console.WriteLine("Podana liczba jest nieprawidłowa");
+                    Console.WriteLine("Podaj liczbe jeszcze raz: ");
+                    liczbaWprowadzona1 = Console.ReadLine();
+                    zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                    if(zmienna == true)
+                    {
+                        number1 = liczba;
+                    }
+                }        
             }
             else
             {
-                Console.WriteLine("Liczby nie są nieprawidłowe, wprowadź je jeszcze raz: ");
+                number1 = liczba;
             }
-            while(zmienna != true) 
-            { 
-                Console.WriteLine("Wprowadź liczbę pierwszą jeszcze raz: ");
-                liczbaWprowadzona1 = Console.ReadLine();
-                Console.WriteLine("Wprowadź liczbę drugą jeszcze raz: ");
-                liczbaWprowadzona2 = Console.ReadLine();
-                zmienna = validator.Validator(liczbaWprowadzona1, liczbaWprowadzona2, out liczba1, out liczba2);
-                if (zmienna == true)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Brawo, Twoje liczby to {0}, {1}", liczba1, liczba2);
-                }
-                else
-                {
-                    Console.WriteLine("Liczby nie są nieprawidłowe, wprowadź je jeszcze raz: ");
-                }
-            }
-
-            
-            int wybor = 0;
-            Dzialania dzialania = new Dzialania(liczba1, liczba2);
-            do
+            Dzialania dzialania = new Dzialania(number1,number2);
+            string znak;
+            Console.WriteLine("Wprowadź znak: ");
+            znak = Console.ReadLine();
+            switch (znak)
             {
-                Console.WriteLine("Teraz Wybierz jedno z kilku możliwych działań, jeśli chcesz opóścić program proszę wybierz 6 --- Wyjście ");
-                Console.WriteLine("1 --- Dodawanie, ");
-                Console.WriteLine("2 --- Odejmowanie, ");
-                Console.WriteLine("3 --- Mnożenie, ");
-                Console.WriteLine("4 --- Dzielenie, ");
-                Console.WriteLine("6 --- Wyjście");
-                wybor = int.Parse(Console.ReadLine());
-                switch (wybor)
+                case "+":
+                    Console.WriteLine("Liczba Druga to: ");
+                    liczbaWprowadzona1 = Console.ReadLine();
+                    zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                    if (zmienna != true)
+                    {
+                        while (zmienna != true)
+                        {
+                            Console.WriteLine("Podana liczba jest nieprawidłowa");
+                            Console.WriteLine("Podaj liczbe jeszcze raz: ");
+                            liczbaWprowadzona1 = Console.ReadLine();
+                            zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                            if (zmienna == true)
+                            {
+                                number2 = liczba;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        number2 = liczba;
+                    }
+                    Console.WriteLine(dzialania.Dodawanie(number1, number2));
+                    break;
+            }
+            double wynik;
+            string wybor;
+            wynik = dzialania.Wynik;
+            Console.WriteLine("Jeśli chcesz kontynuować wybierz \"T\" lub \"N\" jeśli nie chcesz kontynuować");
+            wybor = Console.ReadLine();
+            if (wybor == "T")
+            {
+                while (wybor == "T")
                 {
-                    case 1:
-                        Console.WriteLine(dzialania.Dodawanie(liczba1, liczba2));
-                        break;
-                    case 2:
-                        Console.WriteLine(dzialania.Odejmowanie(liczba1, liczba2));
-                        break;
-                    case 3:
-                        Console.WriteLine(dzialania.Mnozenie(liczba1, liczba2));
-                        break;
-                    case 4:
-                        if (liczba2 == 0)
-                        {
-                            Console.WriteLine("Nie mozna dzielic przez zero!");
-                        }
-                        else
-                        {
-                            Console.WriteLine(dzialania.Dzielenie(liczba1, liczba2));
-                        }
-                        break;
-                    default:
-                        Console.WriteLine("Chwilowo trwają prace konserwacyjne");
-                        break;
-                }
-            } while (wybor != 6);
+                    wynik = dzialania.Wynik;
+                    Console.WriteLine("Proszę wybierz działanie: ");
+                    znak = Console.ReadLine();
+                    switch (znak)
+                    {
+                        case "+":
+                            Console.WriteLine("Liczba Druga to: ");
+                            liczbaWprowadzona1 = Console.ReadLine();
+                            zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                            if (zmienna != true)
+                            {
+                                while (zmienna != true)
+                                {
+                                    Console.WriteLine("Podana liczba jest nieprawidłowa");
+                                    Console.WriteLine("Podaj liczbe jeszcze raz: ");
+                                    liczbaWprowadzona1 = Console.ReadLine();
+                                    zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                                    if (zmienna == true)
+                                    {
+                                        number2 = liczba;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                number2 = liczba;
+                            }
+                            Console.WriteLine(dzialania.Dodawanie(wynik, number2));
+                            break;
 
+                        case "-":
+                            Console.WriteLine("Liczba Druga to: ");
+                            liczbaWprowadzona1 = Console.ReadLine();
+                            zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                            if (zmienna != true)
+                            {
+                                while (zmienna != true)
+                                {
+                                    Console.WriteLine("Podana liczba jest nieprawidłowa");
+                                    Console.WriteLine("Podaj liczbe jeszcze raz: ");
+                                    liczbaWprowadzona1 = Console.ReadLine();
+                                    zmienna = validator.Validator(liczbaWprowadzona1, out liczba);
+                                    if (zmienna == true)
+                                    {
+                                        number2 = liczba;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                number2 = liczba;
+                            }
+                            Console.WriteLine(dzialania.Odejmowanie(wynik, number2));
+                            break;
+                        case "N":
+                            wybor = "N";
+                            Console.WriteLine("Koniec działań");
+                            break;
+                    }
+                }
+            }
+            else Console.WriteLine(dzialania.Wynik);
             Console.ReadKey();
         }
     }

@@ -10,10 +10,13 @@ namespace Kalkulator
 
         public double Number2 { get; private set; }
 
+        public double Wynik { get;  set; }
+
         public Dzialania()
         {
             this.Number1 = 0;
             this.Number2 = 0;
+            this.Wynik = 0;
         }
 
         public Dzialania(double number1, double number2)
@@ -24,11 +27,13 @@ namespace Kalkulator
 
         public double Dodawanie(double number1, double number2)
         {
+            this.Wynik = number1 + number2;
             return number1 + number2;
         }
 
         public double Odejmowanie(double number1, double number2)
         {
+            this.Wynik = number1 - number2;
             return number1 - number2;
         }
 
