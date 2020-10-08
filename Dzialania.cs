@@ -28,23 +28,25 @@ namespace Kalkulator
         public double Dodawanie(double number1, double number2)
         {
             this.Wynik = number1 + number2;
-            return number1 + number2;
+            return this.Wynik;
         }
 
         public double Odejmowanie(double number1, double number2)
         {
             this.Wynik = number1 - number2;
-            return number1 - number2;
+            return this.Wynik;
         }
 
         public double Mnozenie(double number1, double number2)
         {
-            return number1 * number2;
+            this.Wynik = number1 * number2;
+            return this.Wynik;
         }
 
         public double Dzielenie(double number1, double number2)
         {
-            return number1 / number2;
+            this.Wynik = number1 * number2;
+            return this.Wynik;
         }
     }
 }

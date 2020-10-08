@@ -20,20 +20,33 @@ namespace Kalkulator
             this.Liczba = liczba;
         }
 
-        public bool Validator(string liczba1, out double result1)
+        public double Validator(string liczba, out double result)
         {
-            result1 = 0;
-            bool wynik1 = double.TryParse(liczba1, out double resultOne);
-            if (wynik1 == true)
+            result = 0;
+            bool wynik = double.TryParse(liczba, out double resultOne);
+            if (wynik == true)
             {
-                result1 = resultOne;
-                return true;
+                result = resultOne;
+                return resultOne;
             }
             else
             {
-                return false;
+                bool wynik1 = false;
+                Console.WriteLine("Podana liczba jest nieprawidłowa, proszę podaj prawidłową liczbę: ");
+                do
+                {
+                    NumbersFromUser ponownaLiczba = new NumbersFromUser();
+                    this.Liczba = ponownaLiczba.GetNumberFromUser();
+                    wynik1 = double.TryParse(this.Liczba, out double resultOne1);
+                    if(wynik1 == true)
+                    {
+                        result = resultOne1;
+                        return resultOne1;
+                    }
+                    Console.WriteLine("Podana liczba jest nieprawidłowa, proszę podaj prawidłową liczbę: ");
+                } while (wynik1 != true);
+                return 0;
             }
-
         }
     }
 }
