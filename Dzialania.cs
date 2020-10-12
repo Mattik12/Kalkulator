@@ -45,7 +45,7 @@ namespace Kalkulator
 
         public double Dzielenie(double number1, double number2)
         {
-            this.Wynik = number1 * number2;
+            this.Wynik = number1 / number2;
             return this.Wynik;
         }
     }
